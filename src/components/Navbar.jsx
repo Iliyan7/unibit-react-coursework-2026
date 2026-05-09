@@ -24,6 +24,7 @@ export default function Navbar() {
           <span className="text-white font-bold text-lg mr-4">ReactDemo</span>
           <NavLink to="/" className={linkClass}>Posts</NavLink>
           <NavLink to="/users" className={linkClass}>Users</NavLink>
+          <NavLink to="/gallery" className={linkClass}>Gallery</NavLink>
           <NavLink to="/profile" className={linkClass}>Profile</NavLink>
         </div>
         <div className="flex items-center gap-3">

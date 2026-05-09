@@ -7,6 +7,7 @@ import PostsPage from './pages/PostsPage'
 import PostDetailPage from './pages/PostDetailPage'
 import UsersPage from './pages/UsersPage'
 import ProfilePage from './pages/ProfilePage'
+import GalleryPage from './pages/GalleryPage'
 
 function PrivateRoute({ children }) {
   const { user } = useAuth()
@@ -26,6 +27,7 @@ export default function App() {
           <Route path="/" element={<PrivateRoute><PostsPage /></PrivateRoute>} />
           <Route path="/posts/:id" element={<PrivateRoute><PostDetailPage /></PrivateRoute>} />
           <Route path="/users" element={<PrivateRoute><UsersPage /></PrivateRoute>} />
+          <Route path="/gallery" element={<PrivateRoute><GalleryPage /></PrivateRoute>} />
           <Route path="/profile" element={<PrivateRoute><ProfilePage /></PrivateRoute>} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
